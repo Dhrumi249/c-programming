@@ -1,0 +1,52 @@
+#include <stdio.h>
+#include <conio.h>
+
+main() {
+    int mark;
+    char grade;
+
+    printf("Enter your mark: ");
+    scanf("%d", &mark);
+
+    // Input validation
+    if (mark < 0 || mark > 100) {
+        printf("Invalid mark. Please enter a value between 0 and 100.\n");
+    }
+
+    // Step 1: Grade Calculation 
+    grade = (mark >= 90) ? 'A' :
+            (mark >= 80) ? 'B' :
+            (mark >= 70) ? 'C' :
+            (mark >= 60) ? 'D' : 'F';
+
+    // Step 2: Additional Comments 
+    printf("Your grade is %c. ", grade);
+    switch(grade) {
+        case 'A':
+            printf("Excellent work! ");
+            break;
+        case 'B':
+            printf("Well done. ");
+            break;
+        case 'C':
+            printf("Good job. ");
+            break;
+        case 'D':
+            printf("You passed, but you could do better. ");
+            break;
+        case 'F':
+            printf("Sorry, you failed. ");
+            break;
+        default:
+            printf("Invalid grade. ");
+    }
+
+    // Step 3: Eligibility Check
+    if (grade != 'F') {
+        printf("Congratulations! You are eligible for the next level.\n");
+    } else {
+        printf("Please try again next time.\n");
+    }
+
+    getch(); 
+}
