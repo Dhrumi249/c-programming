@@ -1,0 +1,22 @@
+#include<stdio.h>
+#include<conio.h>
+
+main()
+{
+	int number,m,n1,n;
+	clrscr();
+	printf("enter your number:-");
+	scanf("%d",&number);
+	n=number;
+	do
+	{
+		m=n%10;
+		n1=n;
+		n=n/10;
+
+
+	}
+	while(n!=0);
+	printf("addition of first and last number = %d\n",n1+m);
+	getch();
+}

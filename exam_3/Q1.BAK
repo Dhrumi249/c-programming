@@ -1,0 +1,15 @@
+#include<stdio.h>
+#include<conio.h>
+main()
+{
+	char alphabet='a';
+	clrscr();
+	do
+	{
+		printf("%c",alphabet);
+		alphabet+=4;
+	}
+	while(alphabet<=a);
+	getch();
+
+}
